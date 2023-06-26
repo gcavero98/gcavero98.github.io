@@ -1,7 +1,6 @@
 # Capstone project: Bicing
-## Data Analysis
-### Preprocessing
-#### Stations dataset
+## Preprocessing
+### Stations dataset
 *aquí supongo que irá información que saquemos de los plots de Nayara*
 
 *presentación: plots Nayara*
@@ -18,10 +17,10 @@ df['last_updated'] i df['ttl'] -> YYYY-MM-DD HH:MM:SS format.
 
 Dado que los datos de validación están en formato **horario**, hemos resampleado los datos a la misma frecuencia temporal.
 
-#### Information dataset
+### Information dataset
 Usamos las columnas ['lat', 'lon', 'altitude', 'post_code'] (merge con el dataset **Stations**).
 
-#### Climate dataset 
+### Climate dataset 
 Hemos añadido datos climáticos (ERA5 reanalysis data, ECMWF):
 - 1h resolución temporal, 0.25º resolución espacial.
 - Temperatura a 2m, precipitación, intensidad del viento a 10m.
