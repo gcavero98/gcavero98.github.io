@@ -45,7 +45,7 @@ tab1,tab2, tab3 = st.tabs(['Number of docks in Barcelona','Density Maps','Number
 
 
 with tab1:
-    st.title("Bycing Barcelona")
+    st.title("Bicing Barcelona")
     years = df['year'].unique()
     year = st.slider('Year', min_value=2019,max_value=2022,step=1)
 
