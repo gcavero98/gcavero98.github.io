@@ -5,7 +5,6 @@ import streamlit as st
 import pydeck as pdk
 
 import pandas as pd
-import numpy as np
 import seaborn as sns
 
 st.set_page_config(layout='wide')
@@ -44,7 +43,6 @@ def init_connection():
 
 
 df = init_connection()
-print(df.head())
 
 col1, col2, col3 = st.columns(3)
 
@@ -137,11 +135,11 @@ with tab3:
     bike_counts = df.value_counts(subset=['hour', 'day_of_week', Y_COLUMN]).rename('count').reset_index()
     c = ['red', 'blue', 'green', 'orange', 'purple']
     fig, ax = plt.subplots(figsize=(10, 6))
-    g = sns.lineplot(data=bike_counts, x='hour', y=Y_COLUMN, hue='day_of_week', palette="rocket", ax=ax)
+    g = sns.lineplot(dumber of bikes available by hour (%)')
+    ax.legend()ata=bike_counts, x='hour', y=Y_COLUMN, hue='day_of_week', palette="rocket", ax=ax)
     ax.set_xlabel('Hours')
     ax.set_ylabel('Number of bikes available (%)')
-    ax.set_title('Number of bikes available by hour (%)')
-    ax.legend()
+    ax.set_title('N
     st.pyplot(fig)
 
     fig, ax = plt.subplots(figsize=(10, 6))
