@@ -32,12 +32,9 @@ Hemos añadido datos climáticos (**ERA5 reanalysis**, ECMWF):
 Se puede apreciar un comportamiento distinto entre estaciones, decidimos hacer un modelo por estación. Además, se utilizó un regresor global para poder predecir las estaciones que no estuvieran en el dataset de training.
 ![distinto_comportamiento](images/regression_per_station_id.png)
 ### Transformations
-- 'month' (4BinsDIscretizer, encode='onehot')
 - 'hour' (12BinsDIscretizer, encode='ordinal')
-
 Además de las disponibles, añadimos las siguientes features:
-- 'percentage_docks_available'
-- 'percentage_docks_available' shifted 1, 2, 3 and 4 hours (StandardScaler)
+- 'percentage_docks_available' shifted 1, 2, 3 and 4 hours (StandardScaler) ('ctx_1', 'ctx_2', 'ctx_3', 'ctx_4')
 - 'is_summer' (OneHotEncoder)
 - 'is_weekend' (OneHotEncoder)
 - 'is_night' (OneHotEncoder)
