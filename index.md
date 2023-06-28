@@ -13,6 +13,8 @@ df['last_updated'] i df['ttl'] -> YYYY-MM-DD HH:MM:SS format.
 
 Dado que los datos de validación están en formato **horario**, hemos resampleado los datos a la misma frecuencia temporal, promediando los valores de ocupación durante esa hora.
 
+Tras valorar eliminar outliers para el entrenamiento, hemos comprobado que la precisión del modelo no mejoraba. En parte esto se debe al primer promediado por estación y hora que se ha realizado. 
+
 ### Information dataset
 Usamos las columnas ['lat', 'lon', 'altitude', 'post_code'] (merge con el dataset **Stations**).
 ### Data Analysis
