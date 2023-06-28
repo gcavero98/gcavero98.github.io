@@ -50,14 +50,22 @@ Además de las disponibles, añadimos las siguientes features:
 - regressor: hemos probado KNN, random forest, pero obtuvimos mejores resultados con una **Linear Regression**
 
 Viendo los coeficientes asociados a cada feature, descartamos aquellos con un coeficiente cercano a 0, quedándonos con las siguientes features:
-- sdf
-- sdf
-- asdf
-- asdf
-- asdf
+- 'ctx_1', 'ctx_2', 'ctx_3', 'ctx_4'
+- 'delta ctx_2 - ctx_1'
+- 'temperature_2m' discretizada en 4 bins
+- 'hour' discretizada en bins de 2h
+- binarizado 'cloud_cover' y 'precipitation'
+- 'station_id'
 
 
 Resultados validación: [-0.125, -0.116, -0.098, -0.119, -0.099]
+
+
+### Próximos pasos 
+- Utilizar datos de festivos: tanto la ciudad como festivos de barrio y grandes eventos en Barcelona (partidos de fútbol, grandes conciertos) 
+- Utilizar otros datos de clima (ej. humedad)
+- Utilizar otros modelos: MLP Regressor
+
 
 
 
