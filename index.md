@@ -3,8 +3,7 @@
 ### Stations dataset
 *aquí supongo que irá información que saquemos de los plots de Nayara*
 
-*presentación: plots Nayara*
-
+![hola](Numebr of bikes available by hour_hue_hue_week.png)
 Después de un análisis de los datos descargados, decidimos **eliminar** aquellos registros que cumpliesen una o más de las siguientes condiciones:
 - NaN values
 - df[df['num_bikes_available'] != df['num_bikes_available_types.mechanical'] + df['num_bikes_available_types.ebike']]
