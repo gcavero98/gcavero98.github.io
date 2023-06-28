@@ -44,7 +44,7 @@ Además de las disponibles, añadimos las siguientes features:
 ### Cross Validation
 - scoring: 'neg_root_mean_squared_error'
 - split: TimeSeriesSplit(n_split=5) para no entrenar con datos del futuro
-- regressor: hemos probado KNN, random forest, pero obtuvimos mejores resultados con una **Linear Regression**
+- regressor: se han probado KNN, random forest y Linear Regression; pero obtuvimos mejores resultados con este ultimo.
 
 Viendo los coeficientes asociados a cada feature, descartamos aquellos con un coeficiente cercano a 0, quedándonos con las siguientes features:
 - 'ctx_1', 'ctx_2', 'ctx_3', 'ctx_4'
@@ -57,6 +57,7 @@ Viendo los coeficientes asociados a cada feature, descartamos aquellos con un co
 
 Resultados validación: [-0.125, -0.116, -0.098, -0.119, -0.099]
 
+![ypred vs y_true](images/y_pred_vs_true.png)
 
 ### Próximos pasos 
 - Utilizar datos de festivos: tanto la ciudad como festivos de barrio y grandes eventos en Barcelona (partidos de fútbol, grandes conciertos) 
