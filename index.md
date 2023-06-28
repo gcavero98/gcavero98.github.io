@@ -16,19 +16,19 @@ Dado que los datos de validación están en formato **horario**, hemos resamplea
 ### Information dataset
 Usamos las columnas ['lat', 'lon', 'altitude', 'post_code'] (merge con el dataset **Stations**).
 ### Data Analysis
-[stations_per_months](images/per_station/plot.png)
-[stations_per_day_of_week](images/per_day_of_week/plot.png)
-[correlation_with_shifted_timestamps](images/correlation_with_previous_hour.png)
+![stations_per_months](images/per_station/plot.png)
+![stations_per_day_of_week](images/per_day_of_week/plot.png)
+![correlation_with_shifted_timestamps](images/correlation_with_previous_hour.png)
 
 ### Climate dataset
 Hemos añadido datos climáticos (**ERA5 reanalysis**, ECMWF):
 - 1h resolución temporal, 0.25º resolución espacial.
 - **Temperatura a 2m**, precipitación, intensidad del viento a 10m, cloud cover.
-[temperature](images/per_station_by_hour/20.png)
+![temperature](images/per_station_by_hour/20.png)
 
 ## Predictions
 Se puede apreciar un comportamiento distinto entre estaciones, decidimos hacer un modelo por estación. Además, se utilizó un regresor global para poder predecir las estaciones que no estuvieran en el dataset de training.
-[distinto_comportamiento](images/regression_per_station_id.png)
+![distinto_comportamiento](images/regression_per_station_id.png)
 ### Transformations
 - 'month' (4BinsDIscretizer, encode='onehot')
 - 'hour' (12BinsDIscretizer, encode='ordinal')
